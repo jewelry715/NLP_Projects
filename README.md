@@ -63,6 +63,12 @@ model = Model([encoder_inputs, decoder_inputs], decoder_softmax_outputs)
 model.summary()
 </code>
 </pre>
+인코딩에 임베딩과 LSTM3개,디코딩에 임베딩층,LSTM층,그리고 디코더 출력층과 인코딩 출력층이 어텐션층에 들어가고 디코더 출력층과 어텐션 출력층을 concat_layer에 집어넣고
+softmax를 통해서 최종 출력된다.
+## 결과 및 아쉬운 점
+원문과 관련없는 헤드라인이 많이 나옴
+같은 단어의 반복 등 초기 모델과 다른 점이 없음
+결론: 원문과 관련있는 헤드라인이 나오게끔 임베딩층 더 쌓는 등 하이퍼 파라미터 조절해가며 loss 줄이도록 노력할 예정
 ## 참고 문서 및 산출물
 - 참고 데이터: https://github.com/sunnysai12345/News_Summary 
 - 어텐션 모델:  https://github.com/thushv89/attention_keras/tree/master/src/layers
